@@ -1,0 +1,9 @@
+# Relevance judgment method
+
+The binary relevance labels in `qrels.tsv` were assigned with AI assistance by comparing each Italian query with the candidate article's title and available article text (with categories and date used as supporting context). A label of `1` means that the article addresses the information need expressed by the query; `0` means that it does not.
+
+The judgments cover the candidate pool saved in `target/real-evaluation-artifacts-final/judgment_pool.csv`: the top 20 results from each of BM25 and TF-IDF for each query, deduplicated by query and article. During an audit of queries with no relevant candidate, three additional relevant articles found in the full dump were added to `qrels.tsv`: Q064/3765, Q072/5548, and Q080/51808. These three documents were not present in either saved top-20 ranking for their query, so they expand the judgment set without counting as retrieved hits. The judgments still do not cover every document in the WikiNews collection; recall and MAP remain estimates based on the judged set.
+
+These are AI-assisted judgments, not independent judgments by human assessors. They should be described as such in any report and ideally reviewed by a human before being treated as definitive relevance ground truth.
+
+The initial pool had no relevant candidate for Q064, Q072, or Q080. A search of the full dump found a directly relevant article for each: Q064/3765 reports criticism over the placement of a commemorative plaque for Pope John Paul II; Q072/5548 describes an unprecedented procedure that restored a transplanted child's natural heart; Q080/51808 reports the decline in European cattle and sheep numbers and its effects on food prices. None appeared in the corresponding saved top-20 rankings. The report's `queries_without_relevant_judgments` column counts queries with no positive qrel; it does not count queries for which the systems failed to retrieve a known relevant article.

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "Q001",
+    "query": "Quali conseguenze ha avuto l esplosione in una miniera in Cina?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q002",
+    "query": "Come è finita la partita dell Italia contro il Paraguay ai Mondiali 2010?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q003",
+    "query": "Quali contrade hanno partecipato al Palio di Siena?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q004",
+    "query": "Quali temperature sono state previste durante l ondata di caldo in Italia?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q005",
+    "query": "Che cosa è successo nella partita di pallavolo maschile italiana?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q006",
+    "query": "Perché si è dimesso il ministro Calderoli?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q007",
+    "query": "Quali vittime ha causato l incidente con un camion a Chicago?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q008",
+    "query": "Come è stato riattivato il cuore naturale di una bambina trapiantata?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q009",
+    "query": "Che cosa ha causato la schiuma bianca sulle strade di Roma?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q010",
+    "query": "Perché il numero di bovini e ovini sta calando in Europa e come incidono i rincari sul prezzo del cibo?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q011",
+    "query": "Chi ha vinto la ventunesima tappa del Tour de France 2005?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q012",
+    "query": "Quali risultati ci sono stati nella 33ª giornata della Serie A?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q013",
+    "query": "Che effetti ha avuto la crisi dei mutui sulla borsa di Tokyo?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q014",
+    "query": "Chi ha vinto la Royal Rumble del 2014?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q015",
+    "query": "Come è terminata la partita tra Monaco ed Evian?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q016",
+    "query": "Quali risultati ci sono stati nella tappa del Rally Dakar?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q017",
+    "query": "Quali sviluppi ci sono stati nel caso Poggi?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q018",
+    "query": "Quali curiosità caratterizzano il Palio di Siena?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q019",
+    "query": "Quali squadre hanno giocato la Serie A 2008-2009?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q020",
+    "query": "Come Paolo Attivissimo parla di complottismi e libertà digitali?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q021",
+    "query": "Per quale frode è stato arrestato un membro del CIO?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q022",
+    "query": "Quali eventi sono stati presentati a Lucca Comics & Games?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q023",
+    "query": "Quali lavori sono iniziati alla scuola Alberto Cadlolo di Roma?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q024",
+    "query": "Come si è qualificata l Italia alle semifinali dei Mondiali 2006?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q025",
+    "query": "Quali conseguenze ha avuto il tamponamento vicino a Fiumicino?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q026",
+    "query": "Quali cambiamenti ha annunciato il nuovo governo del Belgio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q027",
+    "query": "Chi è diventato primo ministro del Belgio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q028",
+    "query": "Perché il re del Belgio ha chiesto scusa per il colonialismo in Congo?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q029",
+    "query": "Quali polemiche hanno riguardato le statue di Leopoldo II?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q030",
+    "query": "Che cosa è accaduto nell incidente automobilistico a Gilles?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q031",
+    "query": "Quali notizie ci sono sulla scomparsa di un bambino in Belgio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q032",
+    "query": "Che cosa è successo nell attentato con autobomba a Beirut?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q033",
+    "query": "Quali misure sono state adottate dopo l esplosione nella miniera cinese?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q034",
+    "query": "Quali proteste hanno coinvolto gli operatori sanitari belgi?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q035",
+    "query": "Quali decisioni politiche hanno suscitato critiche alla Camera?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q036",
+    "query": "Quali conseguenze ha avuto la crisi economica sui mercati asiatici?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q037",
+    "query": "Come sono cambiati i prezzi degli alimenti in Europa?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q038",
+    "query": "Quali notizie riguardano la sanità regionale italiana?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q039",
+    "query": "Quali calamità naturali hanno colpito le città italiane?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q040",
+    "query": "Quali danni ha provocato il maltempo a Roma?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q041",
+    "query": "Quali temperature estreme sono state registrate in Italia?",
+    "pilot": true,
+    "qrels": {}
+  },
+  {
+    "id": "Q042",
+    "query": "Quali decisioni ha preso il governo italiano sul bilancio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q043",
+    "query": "Quali risultati ha ottenuto la nazionale italiana di calcio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q044",
+    "query": "Come si è conclusa Italia-Inghilterra agli Europei?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q045",
+    "query": "Quali squadre hanno superato i quarti di Champions League?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q046",
+    "query": "Quali risultati ha ottenuto il Napoli in Coppa UEFA?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q047",
+    "query": "Quali squadre si sono qualificate in Champions League?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q048",
+    "query": "Quali risultati ci sono stati nel campionato italiano di calcio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q049",
+    "query": "Chi ha vinto la Coppa America?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q050",
+    "query": "Quali risultati hanno ottenuto Brasile e Argentina nel calcio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q051",
+    "query": "Quali notizie riguardano la Juventus in campionato?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q052",
+    "query": "Quali piloti hanno vinto le gare di Formula 1?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q053",
+    "query": "Quali risultati sono stati ottenuti nelle gare ciclistiche europee?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q054",
+    "query": "Chi ha vinto le tappe di montagna del Tour de France?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q055",
+    "query": "Quali eventi sportivi internazionali hanno coinvolto atleti italiani?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q056",
+    "query": "Quali risultati sono stati registrati nel campionato di pallavolo?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q057",
+    "query": "Quali squadre hanno partecipato ai tornei europei di basket?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q058",
+    "query": "Quali atleti hanno vinto medaglie ai Giochi Olimpici?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q059",
+    "query": "Quali incidenti hanno coinvolto atleti durante una gara?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q060",
+    "query": "Quali eventi culturali si sono svolti a Lucca Comics?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q061",
+    "query": "Quali fumetti e videogiochi sono stati presentati alle fiere italiane?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q062",
+    "query": "Quali mostre o restauri di edifici storici sono stati annunciati a Roma?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q063",
+    "query": "Quali notizie riguardano il Vaticano e papa Wojtyla?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q064",
+    "query": "Quali polemiche hanno accompagnato una commemorazione di Wojtyla?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q065",
+    "query": "Quali film italiani sono stati premiati nei festival?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q066",
+    "query": "Quali musicisti italiani hanno annunciato album o concerti?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q067",
+    "query": "Perché gli Hooverphonic non hanno cantato Love Shine a Light?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q068",
+    "query": "Quali libri o autori sono stati presentati in eventi culturali?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q069",
+    "query": "Quali notizie riguardano la libertà di stampa e i media?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q070",
+    "query": "Come sono state usate le nuove tecnologie nella ricerca?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q071",
+    "query": "Quali scoperte mediche hanno coinvolto trapianti e organi?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q072",
+    "query": "Quali progressi ci sono stati nella cura delle malattie cardiache?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q073",
+    "query": "Quali incidenti industriali hanno causato vittime o feriti?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q074",
+    "query": "Quali misure di sicurezza sono state introdotte dopo un incidente?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q075",
+    "query": "Quali casi di cronaca hanno coinvolto minori scomparsi?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q076",
+    "query": "Quali indagini hanno riguardato frodi nello sport internazionale?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q077",
+    "query": "Quali processi giudiziari hanno attirato attenzione mediatica?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q078",
+    "query": "Quali notizie riguardano criminalità e arresti in Europa?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q079",
+    "query": "Quali iniziative sono state annunciate per ambiente e animali?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q080",
+    "query": "Come è cambiato il numero di animali allevati in Europa?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q081",
+    "query": "Quali effetti hanno avuto i rincari alimentari sui consumatori?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q082",
+    "query": "Quali notizie riguardano energia e infrastrutture in Italia?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q083",
+    "query": "Quali lavori pubblici sono stati avviati a Roma?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q084",
+    "query": "Quali incidenti stradali hanno causato vittime nel Lazio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q085",
+    "query": "Quali notizie riguardano traffico e viabilità vicino agli aeroporti?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q086",
+    "query": "Quali eventi politici hanno portato alle dimissioni di un ministro?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q087",
+    "query": "Quali ministri europei hanno lasciato il proprio incarico?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q088",
+    "query": "Quali decisioni hanno preso i governi europei dopo le elezioni?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q089",
+    "query": "Quali tensioni politiche hanno coinvolto il Belgio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q090",
+    "query": "Quali notizie riguardano il Congo e il passato coloniale belga?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q091",
+    "query": "Quali attentati hanno colpito città del Medio Oriente?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q092",
+    "query": "Quali esplosioni hanno causato vittime in Asia?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q093",
+    "query": "Quali incidenti hanno coinvolto mezzi pesanti e trasporti pubblici?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q094",
+    "query": "Quali notizie riguardano le estrazioni del Lotto in Italia?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q095",
+    "query": "Quando si sono svolte le estrazioni del Lotto durante le feste?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q096",
+    "query": "Quali eventi tradizionali si sono svolti in Toscana?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q097",
+    "query": "Quali contrade si sono affrontate nel Palio di Siena?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q098",
+    "query": "Quali notizie sportive riguardano i Mondiali di calcio?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q099",
+    "query": "Quali risultati ci sono stati nelle competizioni calcistiche europee?",
+    "pilot": false,
+    "qrels": {}
+  },
+  {
+    "id": "Q100",
+    "query": "Quali notizie riguardano le squadre italiane in Coppa UEFA?",
+    "pilot": false,
+    "qrels": {}
+  }
+]

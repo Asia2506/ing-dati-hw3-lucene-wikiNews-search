@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiNews Search — Homework 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand fw-bold" th:href="@{/}">WikiNews Search</a>
+        <form class="d-flex" th:action="@{/reindex}" method="post">
+            <button type="submit" class="btn btn-outline-warning btn-sm"
+                    th:disabled="${!ndjsonExists}"
+                    th:title="${ndjsonExists} ? 'Indicizza il file NDJSON' : 'File NDJSON non trovato in data/'">
+                Indicizza NDJSON
+            </button>
+        </form>
+    </div>
+</nav>
+
+<div class="container pb-5">
+
+    <!-- Messaggi di stato o errore -->
+    <div th:if="${statusMessage != null}" class="alert alert-success" th:text="${statusMessage}"></div>
+    <div th:if="${errorMessage != null}" class="alert alert-danger" th:text="${errorMessage}"></div>
+    <div th:if="${infoMessage != null}" class="alert alert-info" th:text="${infoMessage}"></div>
+
+    <div th:if="${indexMissing}" class="alert alert-warning">
+        L'indice Lucene non è ancora presente nella cartella configurata. Se il file <code>itwikinews_namespace_0_0.ndjson</code> è in <code>data/</code>, puoi generarlo cliccando su <strong>Indicizza NDJSON</strong> in alto a destra.
+    </div>
+
+    <!-- Form di ricerca e filtri -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form th:action="@{/}" method="get" class="row g-3 align-items-end">
+                <div class="col-md-5">
+                    <label for="q" class="form-label">Parole chiave</label>
+                    <input type="text" id="q" name="q" class="form-control"
+                           th:value="${q}" placeholder="Es. energia solare, elezioni, economia...">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="category" class="form-label">Categoria</label>
+                    <input type="text" id="category" name="category" class="form-control"
+                           th:value="${category}" placeholder="Es. Politica">
+                </div>
+
+                <div class="col-md-2">
+                    <label for="minYear" class="form-label">Anno min</label>
+                    <input type="number" id="minYear" name="minYear" class="form-control"
+                           th:value="${minYear}" placeholder="Es. 2015">
+                </div>
+
+                <div class="col-md-2">
+                    <label for="maxYear" class="form-label">Anno max</label>
+                    <input type="number" id="maxYear" name="maxYear" class="form-control"
+                           th:value="${maxYear}" placeholder="Es. 2025">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="ranking" class="form-label">Modello di ranking</label>
+                    <select id="ranking" name="ranking" class="form-select">
+                        <option value="BM25" th:selected="${ranking == 'BM25'}">BM25</option>
+                        <option value="TF-IDF" th:selected="${ranking == 'TF-IDF'}">TF-IDF</option>
+                    </select>
+                </div>
+
+                <div class="col-md-9 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Cerca</button>
+                    <a th:href="@{/}" class="btn btn-outline-secondary">Reset filtri</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Filtri attivi (inclusa rimozione rapida con x per query, categoria e intervallo anni) -->
+    <div th:if="${searchResponse != null}" class="card shadow-sm mb-4">
+        <div class="card-body py-2">
+            <div class="d-flex flex-wrap align-items-center gap-2">
+                <span class="small fw-semibold text-muted">Filtri attivi:</span>
+
+                <span th:if="${!#strings.isEmpty(q)}" class="badge bg-primary">
+                    <span th:text="'Query: ' + ${q}">Query</span>
+                    <a th:href="@{/(q='', category=${category}, minYear=${minYear}, maxYear=${maxYear}, ranking=${ranking})}"
+                       class="text-white text-decoration-none ms-1 fw-bold"
+                       title="Rimuovi parole chiave">×</a>
+                </span>
+
+                <span th:if="${!#strings.isEmpty(category)}" class="badge bg-info text-dark">
+                    <span th:text="'Categoria: ' + ${category}">Categoria</span>
+                    <a th:href="@{/(q=${q}, category='', minYear=${minYear}, maxYear=${maxYear}, ranking=${ranking})}"
+                       class="text-dark text-decoration-none ms-1 fw-bold"
+                       title="Rimuovi filtro categoria">×</a>
+                </span>
+
+                <span th:if="${minYear != null or maxYear != null}" class="badge bg-secondary">
+                    <span th:text="'Anni: ' + (${minYear != null ? minYear : '...'}) + ' - ' + (${maxYear != null ? maxYear : '...'})">
+                        Anni
+                    </span>
+                    <a th:href="@{/(q=${q}, category=${category}, minYear=${null}, maxYear=${null}, ranking=${ranking})}"
+                       class="text-white text-decoration-none ms-1 fw-bold"
+                       title="Rimuovi filtro anni">×</a>
+                </span>
+
+                <span th:if="${#strings.isEmpty(q) and #strings.isEmpty(category) and minYear == null and maxYear == null}"
+                      class="small text-muted">Nessun filtro (tutti gli articoli)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corpo risultati + faccette (visibili solo quando ci sono faccette per i risultati correnti) -->
+    <div class="row" th:if="${searchResponse != null}"
+         th:with="hasFacets=${!searchResponse.categoryFacets().isEmpty()}">
+
+        <!-- Colonna sinistra: Faccette per categoria -->
+        <aside class="col-lg-3 mb-4" th:if="${hasFacets}">
+            <div class="card shadow-sm">
+                <div class="card-header fw-semibold">Categorie (Faccette)</div>
+                <div class="list-group list-group-flush">
+                    <a th:each="facet : ${searchResponse.categoryFacets()}"
+                       th:href="@{/(q=${q}, category=${facet.category()}, minYear=${minYear}, maxYear=${maxYear}, ranking=${ranking})}"
+                       class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                       th:classappend="${category == facet.category()} ? 'active' : ''">
+                        <span th:text="${facet.category()}">Categoria</span>
+                        <span class="badge bg-secondary rounded-pill" th:text="${facet.count()}">0</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Colonna destra: Statistiche e elenco risultati -->
+        <main th:class="${hasFacets} ? 'col-lg-9' : 'col-lg-12'">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="text-muted small">
+                    Trovati <strong th:text="${searchResponse.totalHits()}">0</strong> risultati
+                    — Modello: <strong th:text="${searchResponse.rankingModel()}">BM25</strong>
+                    — Tempo: <strong th:text="${searchResponse.elapsedMillis()}">0</strong> ms
+                </div>
+            </div>
+
+            <div th:if="${searchResponse.hits().isEmpty()}" class="alert alert-secondary">
+                Nessun articolo trovato con i criteri selezionati.
+            </div>
+
+            <div th:each="hit : ${searchResponse.hits()}" class="card shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title mb-1">
+                            <a th:href="@{/article/{id}(id=${hit.identifier()})}"
+                               class="text-decoration-none"
+                               th:text="${hit.title()}">Titolo articolo</a>
+                        </h5>
+                        <span class="badge bg-light text-dark border"
+                              th:text="'Score: ' + ${#numbers.formatDecimal(hit.score(), 1, 3)}">Score</span>
+                    </div>
+
+                    <div class="text-muted small mb-2">
+                        <span th:if="${hit.year() != null}" th:text="'Anno: ' + ${hit.year()} + ' · '"></span>
+                        <span th:each="cat : ${hit.categories()}">
+                            <span class="badge bg-info text-dark me-1" th:text="${cat}">Cat</span>
+                        </span>
+                    </div>
+
+                    <!-- Snippet con evidenziazione HTML prodotta da UnifiedHighlighter -->
+                    <p class="card-text mb-2" th:utext="${hit.snippet()}">Estratto del testo...</p>
+
+                    <div class="d-flex gap-3 small">
+                        <a th:href="@{/article/{id}(id=${hit.identifier()})}" class="link-primary">Leggi articolo</a>
+                        <a th:if="${hit.url() != null and !#strings.isEmpty(hit.url())}"
+                           th:href="${hit.url()}" target="_blank" rel="noopener noreferrer"
+                           class="link-secondary">Apri su WikiNews</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paginazione -->
+            <nav th:if="${searchResponse.totalPages() > 1}" aria-label="Paginazione risultati" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item" th:classappend="${searchResponse.page() <= 1} ? 'disabled'">
+                        <a class="page-link"
+                           th:href="@{/(q=${q}, category=${category}, minYear=${minYear}, maxYear=${maxYear}, ranking=${ranking}, page=${searchResponse.page() - 1})}">
+                            Precedente
+                        </a>
+                    </li>
+
+                    <li class="page-item disabled">
+                        <span class="page-link"
+                              th:text="'Pagina ' + ${searchResponse.page()} + ' di ' + ${searchResponse.totalPages()}">
+                            Pagina 1 di 1
+                        </span>
+                    </li>
+
+                    <li class="page-item" th:classappend="${searchResponse.page() >= searchResponse.totalPages()} ? 'disabled'">
+                        <a class="page-link"
+                           th:href="@{/(q=${q}, category=${category}, minYear=${minYear}, maxYear=${maxYear}, ranking=${ranking}, page=${searchResponse.page() + 1})}">
+                            Successiva
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

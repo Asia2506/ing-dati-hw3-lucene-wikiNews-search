@@ -1,0 +1,802 @@
+[
+  {
+    "id": "Q1",
+    "query": "argomento001",
+    "qrels": {
+      "2": 1,
+      "1": 3
+    }
+  },
+  {
+    "id": "Q2",
+    "query": "argomento002",
+    "qrels": {
+      "3": 3,
+      "4": 1
+    }
+  },
+  {
+    "id": "Q3",
+    "query": "argomento003",
+    "qrels": {
+      "5": 3,
+      "6": 1
+    }
+  },
+  {
+    "id": "Q4",
+    "query": "argomento004",
+    "qrels": {
+      "7": 3,
+      "8": 1
+    }
+  },
+  {
+    "id": "Q5",
+    "query": "argomento005",
+    "qrels": {
+      "9": 3,
+      "10": 1
+    }
+  },
+  {
+    "id": "Q6",
+    "query": "argomento006",
+    "qrels": {
+      "11": 3,
+      "12": 1
+    }
+  },
+  {
+    "id": "Q7",
+    "query": "argomento007",
+    "qrels": {
+      "14": 1,
+      "13": 3
+    }
+  },
+  {
+    "id": "Q8",
+    "query": "argomento008",
+    "qrels": {
+      "15": 3,
+      "16": 1
+    }
+  },
+  {
+    "id": "Q9",
+    "query": "argomento009",
+    "qrels": {
+      "17": 3,
+      "18": 1
+    }
+  },
+  {
+    "id": "Q10",
+    "query": "argomento010",
+    "qrels": {
+      "19": 3,
+      "20": 1
+    }
+  },
+  {
+    "id": "Q11",
+    "query": "argomento011",
+    "qrels": {
+      "21": 3,
+      "22": 1
+    }
+  },
+  {
+    "id": "Q12",
+    "query": "argomento012",
+    "qrels": {
+      "23": 3,
+      "24": 1
+    }
+  },
+  {
+    "id": "Q13",
+    "query": "argomento013",
+    "qrels": {
+      "26": 1,
+      "25": 3
+    }
+  },
+  {
+    "id": "Q14",
+    "query": "argomento014",
+    "qrels": {
+      "28": 1,
+      "27": 3
+    }
+  },
+  {
+    "id": "Q15",
+    "query": "argomento015",
+    "qrels": {
+      "29": 3,
+      "30": 1
+    }
+  },
+  {
+    "id": "Q16",
+    "query": "argomento016",
+    "qrels": {
+      "32": 1,
+      "31": 3
+    }
+  },
+  {
+    "id": "Q17",
+    "query": "argomento017",
+    "qrels": {
+      "33": 3,
+      "34": 1
+    }
+  },
+  {
+    "id": "Q18",
+    "query": "argomento018",
+    "qrels": {
+      "35": 3,
+      "36": 1
+    }
+  },
+  {
+    "id": "Q19",
+    "query": "argomento019",
+    "qrels": {
+      "38": 1,
+      "37": 3
+    }
+  },
+  {
+    "id": "Q20",
+    "query": "argomento020",
+    "qrels": {
+      "39": 3,
+      "40": 1
+    }
+  },
+  {
+    "id": "Q21",
+    "query": "argomento021",
+    "qrels": {
+      "41": 3,
+      "42": 1
+    }
+  },
+  {
+    "id": "Q22",
+    "query": "argomento022",
+    "qrels": {
+      "43": 3,
+      "44": 1
+    }
+  },
+  {
+    "id": "Q23",
+    "query": "argomento023",
+    "qrels": {
+      "45": 3,
+      "46": 1
+    }
+  },
+  {
+    "id": "Q24",
+    "query": "argomento024",
+    "qrels": {
+      "47": 3,
+      "48": 1
+    }
+  },
+  {
+    "id": "Q25",
+    "query": "argomento025",
+    "qrels": {
+      "50": 1,
+      "49": 3
+    }
+  },
+  {
+    "id": "Q26",
+    "query": "argomento026",
+    "qrels": {
+      "52": 1,
+      "51": 3
+    }
+  },
+  {
+    "id": "Q27",
+    "query": "argomento027",
+    "qrels": {
+      "54": 1,
+      "53": 3
+    }
+  },
+  {
+    "id": "Q28",
+    "query": "argomento028",
+    "qrels": {
+      "55": 3,
+      "56": 1
+    }
+  },
+  {
+    "id": "Q29",
+    "query": "argomento029",
+    "qrels": {
+      "58": 1,
+      "57": 3
+    }
+  },
+  {
+    "id": "Q30",
+    "query": "argomento030",
+    "qrels": {
+      "59": 3,
+      "60": 1
+    }
+  },
+  {
+    "id": "Q31",
+    "query": "argomento031",
+    "qrels": {
+      "61": 3,
+      "62": 1
+    }
+  },
+  {
+    "id": "Q32",
+    "query": "argomento032",
+    "qrels": {
+      "64": 1,
+      "63": 3
+    }
+  },
+  {
+    "id": "Q33",
+    "query": "argomento033",
+    "qrels": {
+      "66": 1,
+      "65": 3
+    }
+  },
+  {
+    "id": "Q34",
+    "query": "argomento034",
+    "qrels": {
+      "68": 1,
+      "67": 3
+    }
+  },
+  {
+    "id": "Q35",
+    "query": "argomento035",
+    "qrels": {
+      "69": 3,
+      "70": 1
+    }
+  },
+  {
+    "id": "Q36",
+    "query": "argomento036",
+    "qrels": {
+      "72": 1,
+      "71": 3
+    }
+  },
+  {
+    "id": "Q37",
+    "query": "argomento037",
+    "qrels": {
+      "74": 1,
+      "73": 3
+    }
+  },
+  {
+    "id": "Q38",
+    "query": "argomento038",
+    "qrels": {
+      "76": 1,
+      "75": 3
+    }
+  },
+  {
+    "id": "Q39",
+    "query": "argomento039",
+    "qrels": {
+      "78": 1,
+      "77": 3
+    }
+  },
+  {
+    "id": "Q40",
+    "query": "argomento040",
+    "qrels": {
+      "79": 3,
+      "80": 1
+    }
+  },
+  {
+    "id": "Q41",
+    "query": "argomento041",
+    "qrels": {
+      "81": 3,
+      "82": 1
+    }
+  },
+  {
+    "id": "Q42",
+    "query": "argomento042",
+    "qrels": {
+      "83": 3,
+      "84": 1
+    }
+  },
+  {
+    "id": "Q43",
+    "query": "argomento043",
+    "qrels": {
+      "85": 3,
+      "86": 1
+    }
+  },
+  {
+    "id": "Q44",
+    "query": "argomento044",
+    "qrels": {
+      "87": 3,
+      "88": 1
+    }
+  },
+  {
+    "id": "Q45",
+    "query": "argomento045",
+    "qrels": {
+      "90": 1,
+      "89": 3
+    }
+  },
+  {
+    "id": "Q46",
+    "query": "argomento046",
+    "qrels": {
+      "92": 1,
+      "91": 3
+    }
+  },
+  {
+    "id": "Q47",
+    "query": "argomento047",
+    "qrels": {
+      "93": 3,
+      "94": 1
+    }
+  },
+  {
+    "id": "Q48",
+    "query": "argomento048",
+    "qrels": {
+      "96": 1,
+      "95": 3
+    }
+  },
+  {
+    "id": "Q49",
+    "query": "argomento049",
+    "qrels": {
+      "97": 3,
+      "98": 1
+    }
+  },
+  {
+    "id": "Q50",
+    "query": "argomento050",
+    "qrels": {
+      "100": 1,
+      "99": 3
+    }
+  },
+  {
+    "id": "Q51",
+    "query": "argomento051",
+    "qrels": {
+      "101": 3,
+      "102": 1
+    }
+  },
+  {
+    "id": "Q52",
+    "query": "argomento052",
+    "qrels": {
+      "103": 3,
+      "104": 1
+    }
+  },
+  {
+    "id": "Q53",
+    "query": "argomento053",
+    "qrels": {
+      "105": 3,
+      "106": 1
+    }
+  },
+  {
+    "id": "Q54",
+    "query": "argomento054",
+    "qrels": {
+      "107": 3,
+      "108": 1
+    }
+  },
+  {
+    "id": "Q55",
+    "query": "argomento055",
+    "qrels": {
+      "110": 1,
+      "109": 3
+    }
+  },
+  {
+    "id": "Q56",
+    "query": "argomento056",
+    "qrels": {
+      "111": 3,
+      "112": 1
+    }
+  },
+  {
+    "id": "Q57",
+    "query": "argomento057",
+    "qrels": {
+      "113": 3,
+      "114": 1
+    }
+  },
+  {
+    "id": "Q58",
+    "query": "argomento058",
+    "qrels": {
+      "115": 3,
+      "116": 1
+    }
+  },
+  {
+    "id": "Q59",
+    "query": "argomento059",
+    "qrels": {
+      "118": 1,
+      "117": 3
+    }
+  },
+  {
+    "id": "Q60",
+    "query": "argomento060",
+    "qrels": {
+      "119": 3,
+      "120": 1
+    }
+  },
+  {
+    "id": "Q61",
+    "query": "argomento061",
+    "qrels": {
+      "122": 1,
+      "121": 3
+    }
+  },
+  {
+    "id": "Q62",
+    "query": "argomento062",
+    "qrels": {
+      "124": 1,
+      "123": 3
+    }
+  },
+  {
+    "id": "Q63",
+    "query": "argomento063",
+    "qrels": {
+      "126": 1,
+      "125": 3
+    }
+  },
+  {
+    "id": "Q64",
+    "query": "argomento064",
+    "qrels": {
+      "127": 3,
+      "128": 1
+    }
+  },
+  {
+    "id": "Q65",
+    "query": "argomento065",
+    "qrels": {
+      "130": 1,
+      "129": 3
+    }
+  },
+  {
+    "id": "Q66",
+    "query": "argomento066",
+    "qrels": {
+      "132": 1,
+      "131": 3
+    }
+  },
+  {
+    "id": "Q67",
+    "query": "argomento067",
+    "qrels": {
+      "133": 3,
+      "134": 1
+    }
+  },
+  {
+    "id": "Q68",
+    "query": "argomento068",
+    "qrels": {
+      "135": 3,
+      "136": 1
+    }
+  },
+  {
+    "id": "Q69",
+    "query": "argomento069",
+    "qrels": {
+      "137": 3,
+      "138": 1
+    }
+  },
+  {
+    "id": "Q70",
+    "query": "argomento070",
+    "qrels": {
+      "139": 3,
+      "140": 1
+    }
+  },
+  {
+    "id": "Q71",
+    "query": "argomento071",
+    "qrels": {
+      "141": 3,
+      "142": 1
+    }
+  },
+  {
+    "id": "Q72",
+    "query": "argomento072",
+    "qrels": {
+      "144": 1,
+      "143": 3
+    }
+  },
+  {
+    "id": "Q73",
+    "query": "argomento073",
+    "qrels": {
+      "146": 1,
+      "145": 3
+    }
+  },
+  {
+    "id": "Q74",
+    "query": "argomento074",
+    "qrels": {
+      "148": 1,
+      "147": 3
+    }
+  },
+  {
+    "id": "Q75",
+    "query": "argomento075",
+    "qrels": {
+      "150": 1,
+      "149": 3
+    }
+  },
+  {
+    "id": "Q76",
+    "query": "argomento076",
+    "qrels": {
+      "152": 1,
+      "151": 3
+    }
+  },
+  {
+    "id": "Q77",
+    "query": "argomento077",
+    "qrels": {
+      "154": 1,
+      "153": 3
+    }
+  },
+  {
+    "id": "Q78",
+    "query": "argomento078",
+    "qrels": {
+      "155": 3,
+      "156": 1
+    }
+  },
+  {
+    "id": "Q79",
+    "query": "argomento079",
+    "qrels": {
+      "157": 3,
+      "158": 1
+    }
+  },
+  {
+    "id": "Q80",
+    "query": "argomento080",
+    "qrels": {
+      "159": 3,
+      "160": 1
+    }
+  },
+  {
+    "id": "Q81",
+    "query": "argomento081",
+    "qrels": {
+      "161": 3,
+      "162": 1
+    }
+  },
+  {
+    "id": "Q82",
+    "query": "argomento082",
+    "qrels": {
+      "163": 3,
+      "164": 1
+    }
+  },
+  {
+    "id": "Q83",
+    "query": "argomento083",
+    "qrels": {
+      "166": 1,
+      "165": 3
+    }
+  },
+  {
+    "id": "Q84",
+    "query": "argomento084",
+    "qrels": {
+      "168": 1,
+      "167": 3
+    }
+  },
+  {
+    "id": "Q85",
+    "query": "argomento085",
+    "qrels": {
+      "170": 1,
+      "169": 3
+    }
+  },
+  {
+    "id": "Q86",
+    "query": "argomento086",
+    "qrels": {
+      "171": 3,
+      "172": 1
+    }
+  },
+  {
+    "id": "Q87",
+    "query": "argomento087",
+    "qrels": {
+      "174": 1,
+      "173": 3
+    }
+  },
+  {
+    "id": "Q88",
+    "query": "argomento088",
+    "qrels": {
+      "176": 1,
+      "175": 3
+    }
+  },
+  {
+    "id": "Q89",
+    "query": "argomento089",
+    "qrels": {
+      "178": 1,
+      "177": 3
+    }
+  },
+  {
+    "id": "Q90",
+    "query": "argomento090",
+    "qrels": {
+      "179": 3,
+      "180": 1
+    }
+  },
+  {
+    "id": "Q91",
+    "query": "argomento091",
+    "qrels": {
+      "181": 3,
+      "182": 1
+    }
+  },
+  {
+    "id": "Q92",
+    "query": "argomento092",
+    "qrels": {
+      "183": 3,
+      "184": 1
+    }
+  },
+  {
+    "id": "Q93",
+    "query": "argomento093",
+    "qrels": {
+      "186": 1,
+      "185": 3
+    }
+  },
+  {
+    "id": "Q94",
+    "query": "argomento094",
+    "qrels": {
+      "187": 3,
+      "188": 1
+    }
+  },
+  {
+    "id": "Q95",
+    "query": "argomento095",
+    "qrels": {
+      "189": 3,
+      "190": 1
+    }
+  },
+  {
+    "id": "Q96",
+    "query": "argomento096",
+    "qrels": {
+      "191": 3,
+      "192": 1
+    }
+  },
+  {
+    "id": "Q97",
+    "query": "argomento097",
+    "qrels": {
+      "193": 3,
+      "194": 1
+    }
+  },
+  {
+    "id": "Q98",
+    "query": "argomento098",
+    "qrels": {
+      "196": 1,
+      "195": 3
+    }
+  },
+  {
+    "id": "Q99",
+    "query": "argomento099",
+    "qrels": {
+      "197": 3,
+      "198": 1
+    }
+  },
+  {
+    "id": "Q100",
+    "query": "argomento100",
+    "qrels": {
+      "200": 1,
+      "199": 3
+    }
+  }
+]
